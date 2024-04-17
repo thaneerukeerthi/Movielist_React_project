@@ -6,6 +6,7 @@ const Signup = () => {
     const [email, setEmail] = useState('');
     const [isValidEmail, setIsValidEmail] = useState(true);
     const navigate = useNavigate();
+    const savedUser = JSON.parse(localStorage.getItem("userMovieData")) || [];
 
     const handleSubmit = (e) => {
         e.preventDefault();
